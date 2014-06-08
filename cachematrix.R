@@ -7,14 +7,19 @@
 makeCacheMatrix <- function(x = matrix()) {
   ## function solve() returns the inverse of a matrix
   ## "<<-" assigns CacheMatrix usable in other environments
-  CacheMatrix<<-solve(x)
+  Cachematrix<<-solve(x)
   CacheMatrix
 
 }
 
 
-## Write a short comment describing this function
+## cache is a function that check is the inverse of a matrix is equal to itself
+## if it is not it calculcates the inverse
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+    ## Check to see if CacheMatrix has been assigned if not calls makeCacheMatrix
+    if (!is.matrix(CacheMatrix)){
+      makeCacheMatrix(x)
+    }
+    CacheMatrix
 }
