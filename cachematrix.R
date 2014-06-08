@@ -1,9 +1,14 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These function meet the requirements of Asignment 2
+## for the Coursera R Class
 
-## Write a short comment describing this function makeCacheMatrix ##
+## makeCacheMatrix is a function that returns the inverse of a matrix
+## in this case we assume it is a square invertable matrix
 
 makeCacheMatrix <- function(x = matrix()) {
+  ## function solve() returns the inverse of a matrix
+  ## "<<-" assigns CacheMatrix usable in other environments
+  CacheMatrix<<-solve(x)
+  CacheMatrix
 
 }
 
